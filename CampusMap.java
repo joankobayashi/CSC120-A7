@@ -3,10 +3,18 @@ import java.util.ArrayList;
 public class CampusMap {
 
     ArrayList<Building> buildings;
+    ArrayList<House> houses;
+    ArrayList<Cafe> cafes;
+    ArrayList<Library> libraries;
+    
 
     /* Default constructor, initializes empty ArrayList */
     public CampusMap() {
         buildings = new ArrayList<Building>();
+        houses = new ArrayList<House>();
+        cafes = new ArrayList<Cafe>();
+        libraries = new ArrayList<Library>();
+        
     }
 
     /**
@@ -44,6 +52,16 @@ public class CampusMap {
         CampusMap myMap = new CampusMap();
         myMap.addBuilding(new Building("Ford Hall", "100 Green Street Northampton, MA 01063", 4));
         myMap.addBuilding(new Building("Bass Hall", "4 Tyler Court Northampton, MA 01063", 4));
+        myMap.addBuilding(new House("Baldwin House", "15 Bedford Terrace Northampton, MA 01063", 4, false, false));
+        myMap.addBuilding(new House("Lamont House", "17 Prospect St Northampton, MA 01063", 3, true, false));
+        myMap.addBuilding(new Building("Botanic Garden", "16 College Ln Northampton, MA 01063", 1));
+        myMap.addBuilding(new Building("Art Museum", "20 Elm St Northampton, MA 01063", 3));
+        myMap.addBuilding(new Cafe("Campus Cafe", "100 Elm St Northampton, MA 01063", 2, 1, 1, 1, 1));
+        myMap.addBuilding(new Library("Josten Library", "122 Green St Northampton, MA 01063", 2, true));
+        myMap.addBuilding(new Building("John M. Greene Hall", "60 Elm St Northampton, MA 01063", 2));
+        myMap.addBuilding(new Building("Helen Hills Hills Chapel", "123 Elm St Northampton, MA 01063", 2));
+        myMap.addBuilding(new Building("Seelye Hall", "2 Seelye Dr Northampton, MA 01063", 4));
+        myMap.addBuilding(new Building("Ainsworth Gym", "102 Lower College Ln Northampton, MA 01063", 4));
         System.out.println(myMap);
     }
     

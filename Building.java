@@ -66,6 +66,8 @@ public class Building {
         return null; // We're outside now, so the building is null
     }
 
+
+    
     public void goToFloor(int floorNum) {
         if (this.activeFloor == -1) {
             throw new RuntimeException("You are not inside this Building. Must call enter() before navigating between floors.");
@@ -109,6 +111,19 @@ public class Building {
         fordHall.goUp();
         fordHall.goDown();
         fordHall.exit();
+
+        Cafe myCafe = new Cafe("Woodstar Cafe", "Northampton", 1, 40, 5, 6, 7);
+        System.out.println(myCafe);
+        myCafe.showOptions();
+
+        House myHouse = new House("Baldwin", "Smith College", 2, false, true);
+        System.out.println(myHouse);
+        myHouse.showOptions();
+
+        Library myLibrary = new Library("Hiller Library", "Smith College", 3, true);
+        System.out.println(myLibrary);
+        myLibrary.showOptions();
+
     }
 
 }
